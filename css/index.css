@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+/* CSS Variables */
+
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 7px 15px rgba(104, 104, 104, 0.8);
+    --shadow-img: 0 15px 30px rgba(97, 162, 236, 0.8);
+}
+
+.wrapper {
+    display:grid;
+    gap: 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark);
+}
+
+body {
+    background: #ccc;
+    margin: 30px 50px;
+    line-height: 1.4;
+}
+
+h2 {
+    text-align: center;
+}
+
+.main-nav ul {
+    display: grid;
+    gap: 120px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.main-nav a {
+    background: linear-gradient(to right, rgb(238, 16, 16), rgb(114, 79, 79));
+    background-size: cover;
+    display: block;
+    text-decoration: none;
+    padding: 0.4rem;
+    text-align: center;
+    color: var(--light);
+    text-transform: uppercase;
+    font-stretch: wider;
+    font-size: 0.9rem;
+    box-shadow: var(--shadow);
+    border-radius: 17px 0px 17px 0px;
+    border-width: var(--light);
+}
+
+.main-nav a:hover {
+    /*background: var(--dark);*/
+    background: linear-gradient(to right, rgb(114, 79, 79), rgb(238, 16, 16));
+    color: var(--light);
+}
+
+header h2:hover {
+    color:rgb(29, 118, 235);
+    font-style: italic;
+   
+   
+}
+
+main h2:hover {
+    color: aqua;
+}
+
+.plaid {
+    margin-left:auto;
+    margin-right: auto;
+}
+
+
+/* this creates a circular shape for the image */
+img {
+    box-shadow: var(--shadow-img);
+    border-radius: 25px 25px 25px 25px;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+    display:block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
